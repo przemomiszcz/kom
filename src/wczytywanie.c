@@ -88,7 +88,7 @@ int wczytajKonfiguracje(int argc, char *argv[], int*** plansza, int *rozmiarPlan
 
 	wypisywanie(*plansza, *rozmiarPlanszy);
 
-        zapiszKonfiguracje(*plansza, 123, *rozmiarPlanszy);
+        /* zapiszKonfiguracje(*plansza, 123, *rozmiarPlanszy); */
 
         return liczbaGen;
 

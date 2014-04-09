@@ -11,7 +11,7 @@ void zapiszKonfiguracje(int **plansza, int nrGen, int rozmiarPlanszy) {
         int j = 0;
         char nazwaPlikuWy[1000];
 
-        /*strcpy(nazwaPlikuWy, "koniec.txt");*/
+        /*sprintf(nazwaPlikuWy, "koniec.txt"); */
 
         liczbaNaTekst(nrGen, nazwaPlikuWy);
 
@@ -45,9 +45,7 @@ void liczbaNaTekst(int liczba, char* tekst) {
         }
 
         while (liczba != 0) {
-
                 temp[licznik++] = (liczba % 10) + '0';
-
                 liczba = liczba/10;
         }
 

@@ -9,6 +9,7 @@ void zmienGeneracje(int **plansza, int rozmiarPlanszy, int nrGen) {
         int **poprzedniaGen;
         int i = 0;
         int j = 0;
+	int k;
 
         poprzedniaGen = (int**)malloc(sizeof(int*)*(rozmiarPlanszy + 2));    /* alokujemy pamiec dla poprzedniej planszy */
 
@@ -44,6 +45,12 @@ void zmienGeneracje(int **plansza, int rozmiarPlanszy, int nrGen) {
 
         wypisywanie(poprzedniaGen, rozmiarPlanszy);*/
 
+	for(k=0 ; k < rozmiarPlanszy+2 ; k++)
+		free(poprzedniaGen[k]);
+
+	free(poprzedniaGen); 	
+
+	
 }
 
 

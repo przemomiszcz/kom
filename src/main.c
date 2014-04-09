@@ -10,6 +10,16 @@ char *usage=
 	"Jako pierwszy argument należy podać nazwe pliku z początkową konfiguracją \n"
 	"Drugi argument to liczba generacji do przeprowadznia\n\n";
 
+void free_matrix(int **matrix, int rozmiar){
+
+	int i;
+
+	for(i=0 ; i < rozmiar ; i++)
+		free(matrix[i]);
+
+	free(matrix);
+}
+
 int main(int argc, char *argv[]) {
 
 	int **plansza = NULL;
@@ -22,16 +32,19 @@ int main(int argc, char *argv[]) {
 
 	if(argc < 2 ){
 
-	printf("%s",usage);
+		printf("%s",usage);
 	
 	} else {
 
-	liczbaGen = wczytajKonfiguracje(argc, argv, &plansza, &rozmiarPlanszy);
+		liczbaGen = wczytajKonfiguracje(argc, argv, &plansza, &rozmiarPlanszy);
 	
-	zmienWiele(plansza, rozmiarPlanszy, liczbaGen);
+		zmienWiele(plansza, rozmiarPlanszy, liczbaGen);
 
-	/* generujObraz(plansza, rozmiarPlanszy, 0); */
+		/* generujObraz(plansza, rozmiarPlanszy, 0); */
 
 	}
+
+	free_matrix(plansza,rozmiarPlanszy);
+
 	return 0;
 }
