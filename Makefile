@@ -28,5 +28,8 @@ wczytywanie.o: $(SRC)/wczytywanie.c
 	@echo "Kompiluje modul $@"
 	@gcc -c $(CFLAGS) -I$(HEADERS) $^
 
+test:
+	./program altstart 5
+
 clean:
 	rm *.o
