@@ -31,5 +31,8 @@ wczytywanie.o: $(SRC)/wczytywanie.c
 test:
 	./program altstart 5
 
+test1:
+	./program data 10
+
 clean:
 	rm *.o

@@ -3,6 +3,6 @@
 
 int atoib(char liczbaGeneracji[]);
 
-int wczytajKonfiguracje(int argc, char *argv[], int ***plansza, int *rozmiarPlanszy);
+int wczytajKonfiguracje(char *fname, int ***plansza, int *rozmiarPlanszy, int liczbaGen);
 
 #endif

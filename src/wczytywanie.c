@@ -17,32 +17,16 @@ int atoib(char liczbaGen[]) {
         return atoi(liczbaGen);
 }
 
-int wczytajKonfiguracje(int argc, char *argv[], int*** plansza, int *rozmiarPlanszy) {
+int wczytajKonfiguracje(char *fname, int*** plansza, int *rozmiarPlanszy,int liczbaGen) {
        
 	 /* wczytywanie ilosci generacji z klawy! */
         
 	char nazwaPlikuWe[50];
-        int liczbaGen = 5;
         int i=0;
         int j=0;
 	FILE * plikWe;
 
-        strcpy(nazwaPlikuWe, "altstart");
-
-        printf("Podaj liczbe generacji\n");
-
-        if (argc == 3) {
-                strcpy(nazwaPlikuWe, argv[1]);
-                liczbaGen = atoib(argv[2]);
-                if (liczbaGen == -1) {
-                        liczbaGen = 10;
-                        printf("Nie mozna odczytac liczby generacji\n");
-                }
-        } else {
-                printf("wczytuje domyslna konfiguracje\n");
-        }
-
-        strcat(nazwaPlikuWe, ".txt");
+        sprintf(nazwaPlikuWe, "%s.txt",fname);
 
         printf("%s %d\n", nazwaPlikuWe, liczbaGen);
 

@@ -36,7 +36,7 @@ int main(int argc, char *argv[]) {
 	
 	} else {
 
-		liczbaGen = wczytajKonfiguracje(argc, argv, &plansza, &rozmiarPlanszy);
+		liczbaGen = wczytajKonfiguracje(argv[1], &plansza, &rozmiarPlanszy,atof(argv[2]));
 	
 		zmienWiele(plansza, rozmiarPlanszy, liczbaGen);
 
