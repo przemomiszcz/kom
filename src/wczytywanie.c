@@ -4,19 +4,6 @@
 #include <string.h>
 #include "wypisywanie.h"
 
-int atoib(char liczbaGen[]) {
-
-        char c;
-        int i = 0;
-
-        while ((c = liczbaGen[i++]) != '\0') {
-                if (c <= '0' || c >= '9')
-                        return -1;
-        }
-
-        return atoi(liczbaGen);
-}
-
 int wczytajKonfiguracje(char *fname, int*** plansza, int *rozmiarPlanszy,int liczbaGen) {
        
 	 /* wczytywanie ilosci generacji z klawy! */
